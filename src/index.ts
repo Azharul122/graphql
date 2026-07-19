@@ -1,39 +1,13 @@
-import { ApolloServer } from '@apollo/server';
-import { startStandaloneServer } from '@apollo/server/standalone';
-import products from './db.js';
+import { ApolloServer } from "@apollo/server";
+import { startStandaloneServer } from "@apollo/server/standalone";
 
-
-const typeDefs = `#graphql
-
-  type Product {
-    id: ID!
-    name: String
-    brand: String
-    category: String
-    price: Float
-    stock: Int
-    rating: Float
-    isAvailable: Boolean
-  }
-
-  type Query {
-    products: [Product]
-  }
-
-`;
-
-const resolvers = {
-  Query: {
-    products: () => products,
-  },
-};
-
+import { typeDefs } from "./gql/schema/index.js";
+import { resolvers } from "./gql/resolver/index.js";
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
-
 
 const { url } = await startStandaloneServer(server, {
   listen: { port: 4000 },
