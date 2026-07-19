@@ -154,4 +154,67 @@ export const categoryList = [
   },
 ];
 
+export const reviews = [
+  {
+    id: 1,
+    productId: 1,
+    rating: 4.5,
+    comment: "Great product, highly recommended!",
+  },
+  {
+    id: 2,
+    productId: 1,
+    rating: 4.0,
+    comment: "Good quality, but could be better.",
+  },
+  {
+    id: 3,
+    productId: 1,
+    rating: 3.8,
+    comment: "Average product, nothing special.",
+  },
+  {
+    id: 4,
+    productId: 4,
+    rating: 4.2,
+    comment: "Great value for money, would buy again.",
+  },
+  {
+    id: 5,
+    productId: 1,
+    rating: 4.7,
+    comment: "Excellent product, highly satisfied.",
+  },
+  {
+    id: 6,
+    productId: 6,
+    rating: 4.1,
+    comment: "Good quality, but could be better.",
+  },
+  {
+    id: 7,
+    productId: 7,
+    rating: 3.9,
+    comment: "Average product, nothing special.",
+  },
+  {
+    id: 8,
+    productId: 8,
+    rating: 4.3,
+    comment: "Great value for money, would buy again.",
+  },
+  {
+    id: 9,
+    productId: 9,
+    rating: 4.6,
+    comment: "Excellent product, highly satisfied.",
+  },
+  {
+    id: 10,
+    productId: 10,
+    rating: 4.4,
+    comment: "Good quality, but could be better.",
+  },
+];
+
 export default products;

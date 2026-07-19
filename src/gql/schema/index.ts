@@ -7,6 +7,13 @@ export const typeDefs = `#graphql
     products: [Product]
   }
 
+  type Review {
+    id: ID!
+    productId: ID!
+    rating: Float
+    comment: String
+    product: Product
+  }
 
   type Product {
     id: ID!
@@ -17,7 +24,10 @@ export const typeDefs = `#graphql
     stock: Int
     rating: Float
     isAvailable: Boolean
+    reviews: [Review]
   }
+
+
 
 
 

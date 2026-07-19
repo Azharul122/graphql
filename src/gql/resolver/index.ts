@@ -1,4 +1,4 @@
-import products, { categoryList } from "../../db.js";
+import products, { categoryList, reviews } from "../../db.js";
 
 export const resolvers = {
   Query: {
@@ -15,11 +15,14 @@ export const resolvers = {
   Product: {
     category: (parent: any) =>
       categoryList.find((category) => category.id === parent.categoryId),
+    reviews: (parent: any) =>
+      reviews.filter((review) => review.productId === parent.id),
   },
   Category: {
     products: (parent: any) =>
       products.filter((product) => product.categoryId === parent.id),
   },
+  
 };
 
 export default resolvers;
