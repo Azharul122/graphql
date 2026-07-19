@@ -1,0 +1,22 @@
+{
+  "name": "graphql",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "graphql": "^16.14.2"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js"
+  }
+}
