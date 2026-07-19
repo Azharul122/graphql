@@ -6,6 +6,7 @@
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^26.1.1",
+    "nodemon": "^3.1.14",
     "typescript": "^7.0.2"
   },
   "peerDependencies": {
@@ -16,7 +17,7 @@
     "graphql": "^16.14.2"
   },
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "compile": "tsc -w",
+    "start": "nodemon ./dist/index.js"
   }
 }
