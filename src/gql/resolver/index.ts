@@ -12,6 +12,14 @@ export const resolvers = {
     category: (_: any, { id }: { id: string }) =>
       categoryList.find((category) => category.id.toString() === id),
   },
+  Product: {
+    category: (parent: any) =>
+      categoryList.find((category) => category.id === parent.categoryId),
+  },
+  Category: {
+    products: (parent: any) =>
+      products.filter((product) => product.categoryId === parent.id),
+  },
 };
 
 export default resolvers;

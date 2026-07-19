@@ -1,20 +1,25 @@
 export const typeDefs = `#graphql
 
+
+  type Category {
+    id: ID!
+    name: String
+    products: [Product]
+  }
+
+
   type Product {
     id: ID!
     name: String
     brand: String
-    category: String
+    category: Category
     price: Float
     stock: Int
     rating: Float
     isAvailable: Boolean
   }
 
-  type Category {
-    id: ID!
-    name: String
-  }
+
 
   type Query {
     categories: [Category]

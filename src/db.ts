@@ -99,6 +99,16 @@ const products = [
     rating: 4.8,
     isAvailable: true,
   },
+  {
+    id: 11,
+    name: "Laptop RAM",
+    brand: "UGREEN",
+    categoryId: 1,
+    price: 34.99,
+    stock: 80,
+    rating: 4.7,
+    isAvailable: true,
+  },
 ];
 
 export const categoryList = [
