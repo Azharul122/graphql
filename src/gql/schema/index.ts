@@ -28,14 +28,44 @@ export const typeDefs = `#graphql
   }
 
 
-
-
-
   type Query {
     categories: [Category]
     category(id: ID!): Category
     products: [Product],
     product(id: ID!): Product
+  }
+
+
+
+  type User{
+    id: ID!
+    name: String
+    email: String
+    password: String
+    profile: Profile
+    posts: [Post]
+    createdAt: String
+    updatedAt: String
+  }
+
+  type Profile{
+    id: ID!
+    bio: String
+    userId: ID!
+    user: User
+    createdAt: String
+    updatedAt: String
+  }
+
+  type Post{
+    id: ID!
+    title: String
+    content: String
+    published: Boolean
+    author: User
+    authorId: ID!
+    createdAt: String
+    updatedAt: String
   }
 
 `;
