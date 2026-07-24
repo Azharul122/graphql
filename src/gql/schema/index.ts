@@ -39,12 +39,12 @@ export const typeDefs = `#graphql
 
   type User{
     id: ID!
-    name: String
-    email: String
-    password: String
-    profile: Profile
+    name: String!
+    email: String!
+    password: String!
+    profile: Profile!
     posts: [Post]
-    createdAt: String
+    createdAt: String!
     updatedAt: String
   }
 
@@ -53,18 +53,18 @@ export const typeDefs = `#graphql
     bio: String
     userId: ID!
     user: User
-    createdAt: String
+    createdAt: String!
     updatedAt: String
   }
 
   type Post{
     id: ID!
-    title: String
-    content: String
+    title: String!
+    content: String!
     published: Boolean
-    author: User
+    author: User!
     authorId: ID!
-    createdAt: String
+    createdAt: String!
     updatedAt: String
   }
 
